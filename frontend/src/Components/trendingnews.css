@@ -1,0 +1,11 @@
+.trending-news-container{
+    display: flex;
+    flex-direction:column;
+   
+}
+.trending-news-item{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 100%;
+}

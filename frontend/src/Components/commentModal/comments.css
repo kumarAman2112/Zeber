@@ -1,0 +1,4 @@
+.comments-container{
+    overflow-y: scroll;
+    height:8rem;
+}

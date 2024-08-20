@@ -1,7 +1,7 @@
 .sidebar{
     flex: 2.5;
     height: 36rem;
-   
+    overflow-y: hidden;
   overflow-x: hidden;
 }
 ::-webkit-scrollbar{

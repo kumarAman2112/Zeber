@@ -13,6 +13,7 @@ const Barchart=()=>{
          }]}
          options={
             {
+                title:{text:"Time Spent",style:{fontSize:'15px',fontWeight:600,color:'rgb(38,0,138)'}},
                 colors:['#1E2A5E'],
                 xaxis:{
                

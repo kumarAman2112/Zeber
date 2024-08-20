@@ -80,12 +80,14 @@
 }
 .dashboardRightbarChild1Bottom1{
     width: 20rem;
+    height: 8.2rem;
     background-color: white;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     border-radius: 8px;
 }
 .dashboardRightbarChild1Bottom2{
     width: 21rem;
+    height: 8.2rem;
     background-color: white;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     border-radius: 8px;
@@ -127,7 +129,8 @@
   
 }
 .dashboardRightbarChild2Bottom1{
-    width: 18rem;
+    width: 19rem;
+    height: 7.9rem;
     background-color: white;
     border-radius: 8px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;

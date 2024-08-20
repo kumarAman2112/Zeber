@@ -6,8 +6,9 @@ import CommentIcon from "@mui/icons-material/Comment";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import NewspaperIcon from '@mui/icons-material/Newspaper';
 import "./dashboard.css";
-// import Chart from "../chart";
-import Barchart from "../chart";
+import Barchart from "../Chart/barchart";
+import PieChart from "../Chart/piechart";
+import DonutChart from "../Chart/donutchart";
 const Dashboard = () => {
   return (
     <>
@@ -42,12 +43,14 @@ const Dashboard = () => {
                   textAlign: "center",
                   color: "rgb(38,0,128)",
                   fontWeight: 600,
-                  fontSize:'19px'
+                  fontSize:'16px'
                 }}>Total News/Articles Read</h3>
-              <div style={{ display: "flex", justifyContent: "center" }}><NewspaperIcon style={{ color: "rgb(38,0,128)",fontSize:'30px' }} /></div>
-              <h2  style={{ textAlign: "center", color:"rgb(38,0,128)",fontWeight:600 }}>78</h2>
+              <div style={{ display: "flex", justifyContent: "center" }}><NewspaperIcon style={{ color: "rgb(38,0,128)",fontSize:'24px' }} /></div>
+              <h4 style={{ textAlign: "center", color:"rgb(38,0,128)",fontWeight:600 }}>78</h4>
             </div>
-            <div className="dashboardRightbarChild1Bottom2"></div>
+            <div className="dashboardRightbarChild1Bottom2">
+              <PieChart/>
+            </div>
           </div>
         </div>
         <div className="dashboardRightbarChild2">
@@ -135,7 +138,9 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="dashboardRightbarChild2Bottom">
-            <div className="dashboardRightbarChild2Bottom1"></div>
+            <div className="dashboardRightbarChild2Bottom1">
+              <DonutChart/>
+            </div>
           </div>
         </div>
       </div>

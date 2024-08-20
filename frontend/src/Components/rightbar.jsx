@@ -26,7 +26,10 @@ const Rightbar=()=>{
              <div className="rightbarBottom">
                <h3>Trending</h3>
                <hr/>
+               <div className='trendingNews'> 
                {Trendingnews?.map((n)=> <TrendingNews news={n} />)}
+               </div>
+              
               
              </div>
         </div>

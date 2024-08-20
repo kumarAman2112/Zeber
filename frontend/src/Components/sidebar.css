@@ -1,7 +1,7 @@
 .sidebar{
     flex: 2.5;
-    height: cal(100vh-50px);
-    overflow-y:auto;
+    height: 36rem;
+   
   overflow-x: hidden;
 }
 ::-webkit-scrollbar{
@@ -11,7 +11,7 @@
     background-color: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb{
-    background-color: #022e5a;
+    background-color:#eef1f5;
 }
 .sidebarwrapper{
     padding: 20px;
@@ -26,12 +26,14 @@
     align-items: center;
     margin-bottom: 50px;
     cursor: pointer;
+    color: rgb(38, 0, 138);
 }
 
 .sidebarlistitem > span{
     margin-left: 15px;
     font-weight: 500;
     font-size: 20px;
+  
 }
 
 

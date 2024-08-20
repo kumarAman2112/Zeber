@@ -1,0 +1,165 @@
+.dashboardContainer{
+    display: flex;
+}
+.dashboardSidebar{
+    flex: 1.8;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.dashboardRightbar{
+    display: flex;
+    flex: 7.2;
+    background-color:#d7d6de;
+}
+.dashboardRightbarChild1{
+    flex: 6;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+.dashboardRightbarChild1Top{
+    display: flex;
+    flex: 2.5;
+    width: 42rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    margin-top:1rem ;
+    background-color: white;
+    border-radius: 8px;
+    justify-content: space-around;
+}
+.dashboardRightbarChild1Middle{
+    /* display: flex; */
+    flex:4;
+    width: 42rem;
+    justify-content: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    margin-top:1rem ;
+    background-color: white;
+    border-radius: 8px;
+}
+.dashboardRightbarChild1Bottom{
+    display: flex;
+    flex: 2.5;
+   justify-content: space-around;
+    margin-top:1rem ;
+    width: 43rem;
+    border-radius: 8px;
+}
+    
+.dashboardRightbarChild2{
+    display: flex;
+    flex-direction:column;
+    flex: 2.5;
+}
+.dashboardRightbarChild1TopContent{
+  
+    width: 30rem;
+   
+}
+.dashboardRightbarChild1TopImgContainer{
+    display: flex;
+   
+}
+.dashboardRightbarChild1TopImg{
+    width: 10rem;
+    height: 10rem;
+ 
+}
+.badgeButton{
+    display: flex;
+    width: 7rem;
+    height: 1.6rem;
+    background-color: #d0ccef;
+    border: none;
+    border-radius:5px;
+    color:rgb(38, 0, 128);
+   justify-content: center;
+    font-size: .8rem;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+.dashboardRightbarChild1Bottom1{
+    width: 20rem;
+    background-color: white;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 8px;
+}
+.dashboardRightbarChild1Bottom2{
+    width: 21rem;
+    background-color: white;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 8px;
+}
+.dashboardRightbarChild2Top{
+    display: flex;
+    flex: 2.5;
+   justify-content: space-around;
+    margin-top:1rem ;
+    border-radius: 8px;
+}
+.dashboardRightbarChild2Top1{
+    height: 7.5rem;
+    width:8rem;
+    background-color: white;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 8px;
+}
+.dashboardRightbarChild2Top2{
+    height: 7.5rem;
+    width:8.5rem;
+    background-color: white;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 8px;
+}
+.dashboardRightbarChild2Middle{
+    display: flex;
+    flex:4.5;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+  
+}
+.dashboardRightbarChild2Bottom{
+    display: flex;
+    flex: 3;
+    justify-content: center;
+    
+  
+}
+.dashboardRightbarChild2Bottom1{
+    width: 18rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    margin-top: 1rem;
+}
+.dashboardRightbarChild2MiddleChild{
+    display: flex;
+    flex: 2;
+    justify-content: space-around;
+   
+    width: 20rem;
+}
+.dashboardRightbarChild2MiddleChild1{
+ height: 7.5rem;
+    width: 8rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.dashboardRightbarChild2MiddleChild2{
+   height: 7.5rem;
+    width: 8rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.dashboardRightbarChild2MiddleChild3{
+    flex: 2;
+    width: 18rem;
+    height: 5rem;
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 1rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}

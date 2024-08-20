@@ -31,7 +31,7 @@ export default function Post(props) {
             <span className="postDate">5 mins</span>
           </div>
           <div className="postTopRight">
-            <TelegramIcon className="postshareicon" />
+           
             <BookmarkBorderIcon className="saved" />
           </div>
         </div>
@@ -48,6 +48,7 @@ export default function Post(props) {
               onClick={likesHandler}
             />
             <span className="postlikecounter">{countlikes}</span>
+            <TelegramIcon className="postshareicon" />
           </div>
           <div className="postBottomRight" >
             <ModeComment htmlColor="green" className="postcommenticon" onClick={handleComments}/>

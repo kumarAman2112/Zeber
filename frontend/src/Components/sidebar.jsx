@@ -11,8 +11,8 @@ export default function Sidebar() {
       <div className="sidebarwrapper">
         <ul className="sidebarlist">
           <div className="ProfileTop">
-            <img src="/assets/aman.jpg" alt="" className="ProfileImg" />
-            <h2>Aman Kumar</h2>
+            <img src="ak.jpg" alt="xyz" className="ProfileImg" />
+            <h2 style={{  color: 'rgb(38, 0, 138)'}}>Aman Kumar</h2>
           </div>
           <hr style={{ marginBottom:12 }} />
           <li className="sidebarlistitem">

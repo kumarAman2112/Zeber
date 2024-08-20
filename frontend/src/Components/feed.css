@@ -1,9 +1,14 @@
 .feed{
-    flex: 5;
+    flex: 6;
+    background-color:#eef1f5;
+    height:36rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .feedwrapper{
     padding: 20px;
+   
 }
 .optionWrapper{
     display: flex;
@@ -12,6 +17,7 @@
     width: 100%;
     height: 3rem;
     margin-top: 2rem;
+    
 }
 .optionItem{
     display: flex;

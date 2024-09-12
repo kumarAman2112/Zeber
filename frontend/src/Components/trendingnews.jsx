@@ -3,10 +3,10 @@ const TrendingNews=(props)=>{
     
     return(
             <div className="trending-news-container">
-                <div className="trending-news-item">
-                    <p>{props.news?.title}</p>
+                <a href={props.news?.url} className="trending-news-item">
+                    <p style={{width:'95%'}}>{props.news?.title}</p>
                     <hr style={{width:'100%'}}/>
-                </div> 
+                </a> 
             </div>
     );
 }

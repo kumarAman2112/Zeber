@@ -1,150 +1,111 @@
-import Sidebar from "../sidebar";
-import GroupsIcon from "@mui/icons-material/Groups";
-import CategoryIcon from "@mui/icons-material/Category";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import CommentIcon from "@mui/icons-material/Comment";
-import TelegramIcon from "@mui/icons-material/Telegram";
-import NewspaperIcon from '@mui/icons-material/Newspaper';
+import Barchart from "../Chart/linechart";
+import FollowerBarchart from "../Chart/followersChart";
 import "./dashboard.css";
-import Barchart from "../Chart/barchart";
 import PieChart from "../Chart/piechart";
 import DonutChart from "../Chart/donutchart";
+import { NewspaperOutlined } from "@mui/icons-material";
+
 const Dashboard = () => {
   return (
-    <>
-      <div className="dashboardSidebar">
-        <Sidebar />
-      </div>
-      <div className="dashboardRightbar">
-        <div className="dashboardRightbarChild1">
-          <div className="dashboardRightbarChild1Top">
-            <div className="dashboardRightbarChild1TopContent">
-              <h3 style={{ color: "rgb(38,0,128)" }}>Congratulations Aman</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Recusandae saepe non{" "}
-              </p>
-              <div className="badgeButton">VIEW BADGES</div>
+    <div className="dashboard">
+      <div className="dashboardWrapper">
+        <div className="dashboardLeft">
+          <div className="dashboardLeftContainer">
+            <div className="dashboardProfileImgContainer">
+              <img src="ak.jpg" alt="" className="dashboardProfileImg"></img>
             </div>
-            <div className="dashboardRightbarChild1TopImgContainer">
-              <img
-                src="https://static.vecteezy.com/system/resources/previews/004/807/905/original/a-man-works-on-a-laptop-the-guy-is-sitting-at-the-table-with-a-laptop-flat-style-good-for-image-work-office-hiring-staff-illustration-vector.jpg"
-                alt=""
-                className="dashboardRightbarChild1TopImg"
-              />
+            <div className="dashboardProfileName">Aman Kumar</div>
+            <div
+              style={{ color: "grey", marginTop: ".2rem", fontSize: "16px" }}
+            >
+              Software Engineer
             </div>
-          </div>
-          <div className="dashboardRightbarChild1Middle">
-            <Barchart/>
+            <div className="dashboardProfileDetailsContainer">
+              <div className="dashboardProfileDetails">
+                <span style={{ fontWeight: 600, fontSize: "1.2rem" }}>12</span>
+                <span style={{ color: "grey" }}>Posts</span>
+              </div>
+              <div className="dashboardProfileDetails">
+                <span style={{ fontWeight: 600, fontSize: "1.2rem" }}>124</span>
+                <span style={{ color: "grey" }}>Followers</span>
+              </div>
+              <div className="dashboardProfileDetails">
+                <span style={{ fontWeight: 600, fontSize: "1.2rem" }}>120</span>
+                <span style={{ color: "grey" }}>Following</span>
+              </div>
             </div>
-          <div className="dashboardRightbarChild1Bottom">
-            <div className="dashboardRightbarChild1Bottom1">
-              <h3  style={{
-                  textAlign: "center",
-                  color: "rgb(38,0,128)",
+            <div className="activityContainer">
+              <div
+                style={{
                   fontWeight: 600,
-                  fontSize:'16px'
-                }}>Total News/Articles Read</h3>
-              <div style={{ display: "flex", justifyContent: "center" }}><NewspaperIcon style={{ color: "rgb(38,0,128)",fontSize:'24px' }} /></div>
-              <h4 style={{ textAlign: "center", color:"rgb(38,0,128)",fontWeight:600 }}>78</h4>
-            </div>
-            <div className="dashboardRightbarChild1Bottom2">
-              <PieChart/>
+                  fontSize: "1.2rem",
+                  marginLeft: "1.5rem",
+                  color:'#02397e'
+                }}
+              >
+                Activity
+              </div>
+              <div></div>
             </div>
           </div>
         </div>
-        <div className="dashboardRightbarChild2">
-          <div className="dashboardRightbarChild2Top">
-            <div className="dashboardRightbarChild2Top1">
-              <h3
-                style={{
-                  textAlign: "center",
-                  color: "rgb(38,0,128)",
-                  fontWeight: 600,
-                  fontSize:'14px'
-                }}
-              >
-                All Users
-              </h3>
-              <div style={{ display: "flex", justifyContent: "center" }}>
-                <GroupsIcon style={{ color: "rgb(38,0,128)" }} />
-              </div>
-              <h4 style={{ textAlign: "center", color:"rgb(38,0,128)",fontWeight:600   }}>134567</h4>
-            </div>
-            <div className="dashboardRightbarChild2Top2">
-              <h3
-                style={{
-                  textAlign: "center",
-                  color: "rgb(38,0,128)",
-                  fontWeight: 600,
-                  fontSize:'14px'
-                }}
-              >
-                Categories
-              </h3>
-              <div style={{ display: "flex", justifyContent: "center" }}>
-                <CategoryIcon style={{ color:"rgb(38,0,128)" }} />
-              </div>
-              <h4 style={{ textAlign: "center",color:"rgb(38,0,128)",fontWeight:600 }}>7</h4>
-            </div>
-          </div>
-          <div className="dashboardRightbarChild2Middle">
-            <div className="dashboardRightbarChild2MiddleChild">
-              <div className="dashboardRightbarChild2MiddleChild1">
-                <h3
-                  style={{
-                    textAlign: "center",
-                    color: "rgb(38,0,128)",
-                    fontWeight: 600,
-                    fontSize:'14px'
-                  }}
-                >
-                  Total Likes
-                </h3>
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                  <FavoriteIcon style={{ color:"rgb(38,0,128)" }} />
+        <div className="dashboardRight">
+               <div className="dashboardRightTop">
+                <div className="dashboardRightTopChild">
+                  <DonutChart/>
                 </div>
-                <h4 style={{ textAlign: "center", color: "rgb(38,0,128)",fontWeight:600  }}>120</h4>
-              </div>
-              <div className="dashboardRightbarChild2MiddleChild2">
-                <h3
-                  style={{
-                    textAlign: "center",
-                    color: "rgb(38,0,128)",
-                    fontWeight: 600,
-                    fontSize:'14px'
-                  }}
-                >
-                  Total Comments
-                </h3>
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                  <CommentIcon style={{ color:"rgb(38,0,128)"}} />
+                <div className="dashboardRightTopChild">
+                  <div style={{fontSize:'1rem',fontWeight:700,marginBottom:'1rem',marginTop:'1rem',color:'#02397e'}}>Total Articles/News Read</div>
+                  <NewspaperOutlined style={{fontSize:'2rem',color:'crimson'}}/>
+                  <h3 style={{color:'#02397e',fontWeight:700
+                  }}>67</h3>
                 </div>
-
-                <h4 style={{ textAlign: "center", color:"rgb(38,0,128)",fontWeight:600  }}>90</h4>
-              </div>
-            </div>
-            <div className="dashboardRightbarChild2MiddleChild3">
-              <h3  style={{
-                    textAlign: "center",
-                    color: "rgb(38,0,128)",
-                    fontWeight: 600,
-                    fontSize:'16px'
-                  }}>Total Shared Posts</h3>
-                   <div style={{ display: "flex", justifyContent: "center" }}>
-                  <TelegramIcon style={{ color:"rgb(38,0,128)"}} />
-                </div>
-                  <h4 style={{ textAlign: "center", color: "rgb(38,0,128)",fontWeight:600 }}>50</h4>
-            </div>
+                <div className="dashboardRightTopChild"><PieChart/></div>
+               </div>
+               <div className="dashboardRightMiddle">
+                    <div className="dashboardRightMiddleChild1">
+                      <div style={{color:'#02397e',fontWeight:700,fontSize:'1rem',marginBottom:'.5rem'}}>Top Followers</div>
+                   <div className="topFollowers">
+                    <span><img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?cs=srgb&dl=pexels-pixabay-415829.jpg&fm=jpg" alt="" className="topFollowersImg"></img></span>
+                    <span><img src="https://www.afponline.org/images/default-source/default-album/certification_scholarship_tab_v2.jpg?sfvrsn=8b39e16b_0" alt="" className="topFollowersImg"/></span>
+                    <span><img src="https://img.freepik.com/free-photo/smiley-businesswoman-posing-outdoors-with-arms-crossed-copy-space_23-2148767055.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1724371200&semt=ais_hybrid" alt="" className="topFollowersImg"/></span>
+                    <span><img src="https://static.vecteezy.com/system/resources/previews/038/974/578/non_2x/ai-generated-professional-portrait-of-a-competent-woman-free-photo.jpg" alt="" className="topFollowersImg"/></span>
+                   </div>
+                   <div className="topFollowers">
+                    <span><img src="https://i.pinimg.com/736x/78/6e/e3/786ee3a0699273545b72a02ca444a233.jpg" alt="" className="topFollowersImg"></img></span>
+                    <span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgyY1GNPvwOG6gLB1STlbWivP1NZdw6wKn3VBXPOWEDH05_Pl-Yv4AhmA-g-aE7eu7aGk&usqp=CAU" alt="" className="topFollowersImg"/></span>
+                    <span><img src="https://static.vecteezy.com/system/resources/thumbnails/028/287/529/small/indian-man-with-crossed-arms-wearing-a-formal-shirt-ai-generated-photo.jpg" alt="" className="topFollowersImg"/></span>
+                    <span><img src="https://femina.wwmindia.com/content/2021/sep/women-thumb1632797644.jpg" alt="" className="topFollowersImg"/></span>
+                   </div>
+                    </div>
+                    <div className="dashboardRightMiddleChild2">
+                      <FollowerBarchart/>
+                    </div>
+                    
+               </div>
+               <div className="dashboardRightBottom">
+                    <div className="dashboardRightBottomChild1">
+                      <div className="dashboardLikes">
+                        <span style={{color:'white',marginTop:'.5rem'}}>6458</span>
+                        <span style={{color:'white',marginBottom:'.5rem'}}>New Likes</span>
+                      </div>
+                      <div  className="dashboardComments">
+                      <span style={{color:'white',marginTop:'.5rem'}}>6458</span>
+                      <span style={{color:'white',marginBottom:'.5rem'}}>New Comments</span>
+                      </div>
+                      <div  className="dashboardShared">
+                      <span style={{color:'white',marginTop:'.5rem'}}>78</span>
+                      <span style={{color:'white',marginBottom:'.5rem'}}>Shared</span>
+                      </div>
+                    </div>
+                    <div className="dashboardRightBottomChild2">
+                      <Barchart/>
+                    </div>
+                    
+               </div>
           </div>
-          <div className="dashboardRightbarChild2Bottom">
-            <div className="dashboardRightbarChild2Bottom1">
-              <DonutChart/>
-            </div>
-          </div>
-        </div>
       </div>
-    </>
+    </div>
   );
 };
 export default Dashboard;

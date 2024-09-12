@@ -8,7 +8,7 @@ const DonutChart=()=>{
             height={123}
             series={[54, 45, 41, 17, 15,7]}
             options={{
-                title:{text:'Geographic Segmentation',style:{fontSize:'14px',fontWeight:600,color:'rgb(38,0,138)'}},
+                title:{text:'Geographic Segmentation',style:{fontSize:'14px',fontWeight:600,color:'#02397e'}},
                 labels:['Uttar Pradesh','Maharashtra','Bihar','West Bengal','Madhya Pradesh','Others'],
                 dataLabels:{
                     enabled:false

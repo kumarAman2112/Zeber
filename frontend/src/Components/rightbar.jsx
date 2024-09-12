@@ -1,9 +1,9 @@
-import './rightbar.css'
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import TrendingNews from './trendingnews';
+import "./rightbar.css";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import TrendingNews from "./trendingnews";
 // import Post from './post'
-const Rightbar=()=>{
+const Rightbar = () => {
   const [Trendingnews, setTrendingNews] = useState([]);
   useEffect(() => {
     const fetchNews = async () => {
@@ -14,26 +14,32 @@ const Rightbar=()=>{
     };
     fetchNews();
   }, []);
-    return(
-        <>
-        <div className="rightbarContainer">
-             <div className="rightbarTop">
-                    <h3>Ads and Sponsers</h3>
-                    <hr/>
-               <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZGzt53VaS2g6gpCGFwp8Aj2J-WJAfMRoEXYk8Zbf7qbMir2osxJOafqSwSKouRQpzshE&usqp=CAU' alt='' className='ads'></img>
-
-             </div>
-             <div className="rightbarBottom">
-               <h3>Trending</h3>
-               <hr/>
-               <div className='trendingNews'> 
-               {Trendingnews?.map((n)=> <TrendingNews news={n} />)}
-               </div>
-              
-              
-             </div>
+  return (
+    <>
+      <div className="rightbarContainer">
+        <div className="rightbarTop">
+          <h3>Ads and Sponsers</h3>
+          <hr />
+          <div className="adsConatiner">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZGzt53VaS2g6gpCGFwp8Aj2J-WJAfMRoEXYk8Zbf7qbMir2osxJOafqSwSKouRQpzshE&usqp=CAU"
+            alt=""
+            className="ads"
+          ></img>
+          </div>
+         
         </div>
-        </>
-    )
-}
+        <div className="rightbarBottom">
+          <h3>Trending News</h3>
+          <hr />
+          <div className="trendingNews">
+            {Trendingnews?.map((n) => (
+              <TrendingNews news={n} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 export default Rightbar;

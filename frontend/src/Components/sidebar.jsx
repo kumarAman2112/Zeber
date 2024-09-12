@@ -5,6 +5,7 @@ import CategoryIcon from "@mui/icons-material/Category";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import DashboardIcon from "@mui/icons-material/Dashboard";
+import { Link } from "react-router-dom";
 export default function Sidebar() {
   return (
     <div className="sidebar">
@@ -12,12 +13,12 @@ export default function Sidebar() {
         <ul className="sidebarlist">
           <div className="ProfileTop">
             <img src="ak.jpg" alt="xyz" className="ProfileImg" />
-            <h2 style={{  color: 'rgb(38, 0, 138)'}}>Aman Kumar</h2>
+            <h2 style={{  color: '#164863'}}>Aman Kumar</h2>
           </div>
           <hr style={{ marginBottom:12 }} />
           <li className="sidebarlistitem">
             <DashboardIcon className="sidebaricon" />
-            <span className="sidebarlistitemtext">Dashboard</span>
+            <span className="sidebarlistitemtext"><Link to='/newsDashboard' style={{color:"#164863",textDecoration:"none"}} >Dashboard</Link></span>
           </li>
           <li className="sidebarlistitem">
             <TrendingUpIcon className="sidebaricon" />
@@ -29,11 +30,19 @@ export default function Sidebar() {
           </li>
           <li className="sidebarlistitem">
             <CategoryIcon />
-            <span className="sidebarlistitemtext">Categories</span>
+            <label htmlFor='newsCategories' className="categ">Categories
+            <select className="categOption"   id="newsCategories">
+              <option value="hiddenVal"></option>
+              <option value="Technology">Technology</option>
+              <option value="Sports">Sports</option>
+              <option value="Entertainment">Entertainment</option>
+              <option value="Business">Business</option>
+            </select>
+            </label>
           </li>
           <li className="sidebarlistitem">
             <BookmarkIcon />
-            <span className="sidebarlistitemtext">Saved</span>
+            <span className="sidebarlistitemtext"><Link to='/saved' style={{color:"#164863",textDecoration:"none"}} >Saved</Link></span>
           </li>
           <li className="sidebarlistitem">
             <NotificationsIcon />

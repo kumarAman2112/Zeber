@@ -22,7 +22,6 @@ const CommentModal = (props) => {
   const [loading, setLoading] = useState(false);
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
-  const [commentsRealTime, setCommentsRealTime] = useState([]);
   const userId = "66ce18d463106fd96982f201";
 
   const fetchComments = async () => {
@@ -30,7 +29,7 @@ const CommentModal = (props) => {
       setIsCommentLoading(1);
       const res = await axios.get(`/api/v1/posts/post/${props.id}`);
       //    console.log(res.data.data.comments);/
-      setComments(res.data.data.comments.sort((a, b) => new Date(b.created) - new Date(a.created)));
+      setComments(res.data.data.comments.sort((a, b) => {return new Date(b.created) - new Date(a.created)}));
       setIsCommentLoading(0);
     } catch (error) {
       console.log(error);
@@ -44,7 +43,9 @@ const CommentModal = (props) => {
   useEffect(() => {
     // console.log('SOCKET IO', socket);
     socket.on("new-comment", (newComment) => {
-      setCommentsRealTime(newComment);
+      setComments(newComment.sort((c1,c2)=>{
+        return new Date(c2.created) - new Date(c1.created)
+      }))
     });
   }, []);
 
@@ -69,9 +70,6 @@ const CommentModal = (props) => {
     }
   };
 
-  let uiCommentUpdate =
-    commentsRealTime.length > 0 ? commentsRealTime : comments;
-
   return (
     <div
       style={{
@@ -84,7 +82,7 @@ const CommentModal = (props) => {
       }}
     >
       {isCommentLoading ?<UILoader width={400}/>
-      :<>{uiCommentUpdate.map((comment) => (
+      :<>{comments.map((comment) => (
         <CommentList
           key={comment._id}
           name={""} // loggedIn user name will be displayed

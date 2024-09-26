@@ -12,8 +12,7 @@ const socket=io("/",{
 const Feed = () => {
   const [isPostLoading, setIsPostLoading] = useState(false);
   const [posts, setPosts] = useState([]);
-  const [addLikedPosts,setAddLikedPosts]=useState([]);
-  const [removeLikedPosts,setRemoveLikedPosts]=useState([]);
+ 
   const fetchPosts = async () => {
     setIsPostLoading(true);
     const res = await axios.get(
@@ -39,7 +38,7 @@ const Feed = () => {
     }));
     document.getElementById("optionItem1").style.borderBottom = "2px solid gray";
     document.getElementById("optionItem2").style.borderBottom = ""
-    document.getElementById("optionItem1").style.borderRight = "none"
+   
    }
 
 
@@ -52,22 +51,25 @@ const Feed = () => {
       }));
       document.getElementById("optionItem2").style.borderBottom = "2px solid gray";
       document.getElementById("optionItem1").style.borderBottom = ""
-      document.getElementById("optionItem1").style.borderRight = 'none'
+    
     }
 
 
     useEffect(() => {
       socket.on("add-like",(newPosts)=>{
-          setAddLikedPosts(newPosts);
-          setRemoveLikedPosts('');
+         setPosts(newPosts.sort((p1,p2)=>{
+          return new Date(p2.createdAt) - new Date(p1.createdAt)
+         }))
       })
       socket.on("remove-like",(newPosts)=>{
-          setRemoveLikedPosts(newPosts);
-          setAddLikedPosts('');
+        setPosts(newPosts.sort((p1,p2)=>{
+          return new Date(p2.createdAt) - new Date(p1.createdAt)
+         }))
+    
       })
   },[])
  
-  let uiPosts=addLikedPosts.length>0?addLikedPosts:removeLikedPosts.length>0?removeLikedPosts:posts;
+  
   return (
     <div className="feed">
       <div className="feedwrapper">
@@ -77,7 +79,7 @@ const Feed = () => {
           <div className="optionItem" id="optionItem2" onClick={HandleLatest}>Latest</div>
         
         </div>
-        {isPostLoading?<UILoader width={700}/>: <>{uiPosts.map((p) => (
+        {isPostLoading?<UILoader width={700}/>: <>{posts.map((p) => (
           <Post key={p._id} id={p._id} post={p}  />
         ))}</>
         }
